@@ -8,20 +8,25 @@
 <body>
     <h1>Synonym Finder</h1>
     <label for="inputWord">Enter a word:</label>
-    <input type="text" id="inputWord" placeholder="e.g., happy">
-    <button onclick="findSynonyms()">Find Synonyms</button>
-    <p id="synonymsResult"></p>
+    <input type="text" spellcheck="true"></input>
+    
+    
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
     <script>
-        async function findSynonyms() {
-            const inputWord = document.getElementById('inputWord').value.trim();
+       // Example using spellchecker in Node.js
+const spellchecker = require('spellchecker');
+const userInput = "teh";
 
-            if (!inputWord) {
-                alert('Please enter a word.');
-                return;
-            }
+if (!spellchecker.isMisspelled(userInput)) {
+    console.log(`"${userInput}" is misspelled.`);
+    const suggestions = spellchecker.getCorrectionsForMisspelling(userInput);
+    if (suggestions.length > 0) {
+        console.log(`Did you mean: ${suggestions.join(', ')}?`);
+    }
+}
 
+<<<<<<< Updated upstream
             const openaiApiKey = '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 api';
             const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
 
@@ -48,6 +53,8 @@
                 document.getElementById('synonymsResult').textContent = 'Failed to find synonyms.';
             }
         }
+=======
+>>>>>>> Stashed changes
     </script>
 </body>
 </html>
