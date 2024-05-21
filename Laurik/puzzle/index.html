@@ -3,16 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sliding Puzzle</title>
+    <title>Puzzle</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
 </head>
-<body>
-    <div class="puzzle-container">
-        <h1>Sliding Puzzle</h1>
-        <div id="puzzleBoard"></div>
-        <button onclick="shuffleTiles()">Shuffle</button>
-    </div>
 
+<body style="background-color: black;">
+    
+            <div class="puzzle-container">
+        
+        <div id="puzzleBoard" class="mb-3"></div>
+        
+        
+    </div>
+    <div>
+    <h2 style="text-align:center;">Raspunsul tau se afla dupa acest puzzle</h2>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="background-color: black;color:lightskyblue">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" id="option1" autocomplete="off"  onclick="solvePuzzle()" checked> b
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option2" autocomplete="off"  onclick="checkCompletion()"> c
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option3" autocomplete="off"  onclick="shuffleTiles()" onclick="checkCompletion()" class="button"> Shuffle
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option3" autocomplete="off"  onclick="skip()" class="button" >Skip
+          </label>
+      </div>
+   
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

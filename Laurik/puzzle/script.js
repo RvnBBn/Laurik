@@ -66,9 +66,54 @@ function checkCompletion() {
     const isComplete = tiles.every((tile, index) => tile.dataset.number === '' || parseInt(tile.dataset.number) === index + 1);
 
     if (isComplete) {
-        alert('Congratulations! You solved the puzzle!');
+        createCompletionButton();
     }
 }
 
+function createCompletionButton() {
+    // Check if a completion button already exists
+    const existingButton = document.getElementById('completionButton');
+    if (existingButton) 
+        return;
+
+    const completeButton = document.createElement('button');
+    completeButton.id = 'completionButton';
+    completeButton.textContent = 'Poti trece mai departe';
+    completeButton.className = 'btn btn-secondary';
+    completeButton.className = 'button';
+    completeButton.onclick = 0;
+    document.querySelector('.puzzle-container').appendChild(completeButton);
+}
+function solvePuzzle() {
+    const board = document.getElementById('puzzleBoard');
+    board.innerHTML = '';
+
+    // Arrange tiles in the correct order
+    tiles = [];
+    for (let i = 0; i < gridSize * gridSize - 1; i++) {
+        const tile = document.createElement('div');
+        tile.className = 'tile';
+        tile.textContent = i + 1;
+        tile.dataset.number = i + 1;
+        tiles.push(tile);
+        board.appendChild(tile);
+    }
+    // Create the empty tile
+    const emptyTile = document.createElement('div');
+    emptyTile.className = 'tile';
+    emptyTile.textContent = '';
+    emptyTile.dataset.number = '';
+    tiles.push(emptyTile);
+    board.appendChild(emptyTile);
+
+    // Remove the Solve Puzzle button
+    const completeButton = document.getElementById('completionButton');
+    if (completeButton) completeButton.remove();
+}
+
+function skip()
+{
+    
+}
 // Initialize puzzle on page load
 createPuzzle();
