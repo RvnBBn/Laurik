@@ -3,58 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synonym Finder</title>
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
 </head>
-<body>
-    <h1>Synonym Finder</h1>
-    <label for="inputWord">Enter a word:</label>
-    <input type="text" spellcheck="true"></input>
+
+<body style="background-color: black;">
     
-    
-
-  
-    <script>
-       // Example using spellchecker in Node.js
-const spellchecker = require('spellchecker');
-const userInput = "teh";
-
-if (!spellchecker.isMisspelled(userInput)) {
-    console.log(`"${userInput}" is misspelled.`);
-    const suggestions = spellchecker.getCorrectionsForMisspelling(userInput);
-    if (suggestions.length > 0) {
-        console.log(`Did you mean: ${suggestions.join(', ')}?`);
-    }
-}
-
-<<<<<<< Updated upstream
-            const openaiApiKey = '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 api';
-            const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
-
-            try {
-                const response = await axios.post(apiUrl, {
-                    prompt: `What are some synonyms for "${inputWord}"?`,
-                    max_tokens: 5,
-                    n: 1,
-                }, {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${openaiApiKey}`,
-                    },
-                });
-
-                if (response.status === 200) {
-                    const synonyms = response.data.choices[0].text.trim();
-                    document.getElementById('synonymsResult').textContent = `Synonyms for "${inputWord}": ${synonyms}`;
-                } else {
-                    throw new Error('Unexpected API response');
-                }
-            } catch (error) {
-                console.error('Error querying OpenAI API:', error.message);
-                document.getElementById('synonymsResult').textContent = 'Failed to find synonyms.';
-            }
-        }
-=======
->>>>>>> Stashed changes
-    </script>
+            <div class="puzzle-container">
+        
+        <div id="puzzleBoard" class="mb-3"></div>
+        
+        
+    </div>
+    <div>
+    <h2 style="text-align:center;">Raspunsul tau se afla dupa acest puzzle</h2>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="background-color: black;color:lightskyblue">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" id="option1" autocomplete="off"  onclick="solvePuzzle()" checked> b
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option2" autocomplete="off"  onclick="checkCompletion()"> c
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option3" autocomplete="off"  onclick="shuffleTiles()" onclick="checkCompletion()" class="button"> Shuffle
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option3" autocomplete="off"  onclick="skip()" class="button" >Skip
+          </label>
+      </div>
+   
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
