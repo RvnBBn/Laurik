@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <link rel="stylesheet" href="C:\Users\razvan\OneDrive\Documents\GitHub\Laurik\Css.css">
+</head>
+<body>
+    <div class="container"><h1>Buna,detectiv Badea!</h1>
+
+    <p>Raspunde la aceasta intrebare pentru a primii urmatoarii pasi:</p>
+    <form id="questionForm">
+        <label for="answer">De ce crezi ca diagnoza finala este incorecta?</label>
+        <input type="text" id="answer" name="answer" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+    <script>
+         document.getElementById('questionForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+            if (userAnswer === "tensiometru") {
+                // Redirect to another page if the answer is correct
+                window.location.href = 'redirect.html';
+            } else {
+                alert('Incorrect answer. Please try again!');
+            }
+        });
+    </script>
+</body>
+</html>
+
