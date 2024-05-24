@@ -81,8 +81,8 @@ function createCompletionButton() {
     completeButton.textContent = 'Poti trece mai departe';
     completeButton.className = 'btn btn-secondary';
     completeButton.className = 'button';
-    completeButton.onclick = 0;
-    document.querySelector('.puzzle-container').appendChild(completeButton);
+    completeButton.onclick =function() { window.location.href = 'primulplic.html' ;};
+    document.querySelector('div').appendChild(completeButton);
 }
 function solvePuzzle() {
     const board = document.getElementById('puzzleBoard');
@@ -108,12 +108,9 @@ function solvePuzzle() {
 
     // Remove the Solve Puzzle button
     const completeButton = document.getElementById('completionButton');
-    if (completeButton) completeButton.remove();
+   
 }
 
-function skip()
-{
-    
-}
+
 // Initialize puzzle on page load
 createPuzzle();

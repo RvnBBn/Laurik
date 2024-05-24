@@ -22,6 +22,9 @@ body {
     margin: 20px auto;
     border: 2px solid black;
     padding: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .puzzle-container {
@@ -41,9 +44,11 @@ body {
     
 }
 h2{
+    justify-content: center;
     text-align: center;
+    align-items: center;
     color:lightseagreen;
-    font:menu;
+    font:24px;
 }
 btn-group btn-group-toggle{
     color: lightseagreen;
