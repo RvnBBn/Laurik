@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>R</title>
+</head>
+<body style="background-image: url(buchete.png);">
+ <h2 style="color:red">Sorry for being a stressed bitch ;(</h2>
+ <audio id="myAudio" controls onplay="startAudioAtTime()">
+  <source src="Florin Salam 7 Trandafiri.mp3" type="audio/mpeg">
+</audio>
+<div>
+<div class="container" id="container"></div>
+</div>
+
+ <script>
+ 
+  function startAudioAtTime() {
+    var audio = document.getElementById('myAudio');
+    var startTimeInSeconds = 140; // Change this to the desired start time
+    audio.currentTime = startTimeInSeconds;
+  }
+</script>
+
+
+
+<script>
+  // Number of pictures to create
+  const numPictures = 10;
+
+  // Container to hold the pictures
+  const container = document.getElementById('container');
+
+  // Function to create a picture element
+  function createPicture() {
+      const picture = document.createElement('img');
+      picture.className = 'picture';
+      picture.src = 'rose.jpg';
+      picture.alt = 'Falling Picture';
+      container.appendChild(picture);
+      
+  }
+
+  // Create multiple pictures
+  for (let i = 0; i < numPictures; i++) {
+      createPicture();
+      
+  }
+</script>
+<!--<script>
+  // Number of pictures to create
+  const numPictures1 = 5;
+
+  // Container to hold the pictures
+  const container1 = document.getElementById('container1');
+
+  // Function to create a picture element
+  function createPicture() {
+      const picture = document.createElement('img');
+      picture.className = 'picture';
+      picture.src = 'buchete.png';
+      picture.alt = 'Falling Picture';
+      container.appendChild(picture);
+  }
+
+  // Create multiple pictures
+  for (let i = 0; i < numPictures1; i++) {
+      createPicture();
+  }
+</script>
+-->
+
+  
+  
+  
+</body>
+</html>
+
+
+
+

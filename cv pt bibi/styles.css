@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 160px ;
+  width:160px;
+  align-items: end;
+  text-align: end;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 150px); /* Three columns, each 150px wide */
+  grid-gap: 10px; /* Space between grid items */
+}
+.container img {
+  width: 100%; /* Full width of grid column */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.picture {
+  position: absolute;
+  top: -200px; /* Start position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  animation: fall 5s linear infinite; /* Adjust animation speed */
+}
+@keyframes fall {
+  0% {
+      top: -200px; /* Start position */
+  }
+  100% {
+      top: calc(100vh - 200px); /* End position */
+  }
+}
+  

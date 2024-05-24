@@ -9,6 +9,8 @@ body {
 
 .button{
     text-align: center;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     color: lightseagreen;
     font-size: 24px;
@@ -50,7 +52,18 @@ h2{
     color:lightseagreen;
     font:24px;
 }
-btn-group btn-group-toggle{
-    color: lightseagreen;
-    background-color: black;
+.btn-group .btn {
+    border-radius: 0; /* Remove border radius */
+    background-color: black; /* Change background color */
+    border-color: black; /* Change border color */
+    color: lightseagreen; /* Change text color */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+.btn-secondary .btn:active
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}  
