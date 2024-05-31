@@ -25,13 +25,13 @@ body {
     border: 2px solid black;
     padding: 5px;
     text-align: center;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
 .puzzle-container {
     
-    text-align: center;
+    text-align: left;
 }
 
 .tile {
@@ -47,7 +47,7 @@ body {
 }
 h2{
     justify-content: center;
-    text-align: center;
+    text-align: left;
     align-items: center;
     color:lightseagreen;
     font:24px;

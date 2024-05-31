@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinta</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+     <div class="container mt-5">
+        <button id="one-time-button3" class="btn btn-primary" onclick="showText('hiddenText4')">Vorbeste cu partenerul tau in privat</button>
+        </div>
+   
+    <div class="container mt-5">
+        <button id="one-time-button2" class="btn btn-primary" onclick="showText('hiddenText2')">  Tortueaza-l pana iti marturiseste</button>
+      </div>  
+        <div class="container mt-5">
+        <button id="one-time-button1" class="btn btn-primary" onclick="showText('hiddenText1')">                  Asculta-i alibiul</button>
+        </div> 
+       </div>
+        <div id="hiddenText1" class="hiddenText"><p>Armin: In ultima saptamana am fost plecat in cantonament.</p>
+            <p> Enghin: Vrei sa iti bag pula in gura?</p>
+            <p> Armin: Jur vere... Nici nu am intrat pe telefon, nu am avut internet nimic</p>
+           <p> Enghin: Tu imi vorbesti frumos ba pula, ma auzi?  </p>
+           <button  class="btn btn-primary" onclick="showText1('hiddenText3')">--></button>
+           <div id="hiddenText3" class="hiddenText">
+            <b><p>Vorbesti cu Enghin de o parte:</p></b><p> detectiv Badea... ma descurc aici</p>
+            <a href="aldoileaplic.html">Mergi mai departe</a></div>
+        </div>
+        <div id="hiddenText2" class="hiddenText">
+            <p>Laura: hehehe. Nu ai facut nimic?</p>
+            <p>Armin: Nu... Jur pe Coran, nu am facut nimic.</p>
+            <p>Laura: Bine...bine</p>
+            <a href="arma.html" style="color:black;background-color:gray;border: 2px solid;">Dai TATA</a>
+        </div>
+        <div id="hiddenText4" class="hiddenText">
+            <p>Enghin:O sa il iau la bataie pana imi zice ceva.</p>
+            <p>Laura:Nu...sigur putem sa il facem sa zica si in alt mod..</p>
+            <p>Enghin:Ma descurc aici, inchide usa si perdeaua la plecare.</p>
+            <a href="aldoileaplic.html">Mergi mai departe</a></div>
+        </div>
+    </div>
+
+    <script>
+        function disableAllButtons() {
+            document.getElementById('one-time-button1').disabled = true;
+            document.getElementById('one-time-button2').disabled = true;
+            document.getElementById('one-time-button3').disabled = true;
+        
+    }
+        function showText(id) {
+        var textElements = document.querySelectorAll('.hiddenText');
+        var clickedText = document.getElementById(id);
+        var lastShownText = document.querySelector('.show');
+
+        // Hide the previously shown text
+        if (lastShownText) {
+            lastShownText.classList.remove('show');
+        }
+
+        // Show the clicked text
+        clickedText.classList.add('show');
+
+        // Disable the clicked button
+       disableAllButtons();
+       
+    }
+    function showText1(id) {
+        var textElements = document.querySelectorAll('.hiddenText');
+        var clickedText = document.getElementById(id);
+       
+
+        // Show the clicked text
+        clickedText.classList.add('show');
+
+        // Disable the clicked button
+    }
+       
+       
+       
+        
+    </script>
+</body>
+</html>

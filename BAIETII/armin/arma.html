@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tort-ura</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body  style="color:lightseagreen">
+    <div class="container">
+        <h1>Alege o armă pentru tortura:</h1>
+        <select id="weapons">
+            <option value="">--Selectează o armă--</option>
+            <option value="dildo">Dildo</option>
+            <option value="bata">Bâtă</option>
+            <option value="Papuc">Papucu</option>
+            <option value="Privirea">Privirea</option>
+        </select>
+        <button onclick="torture()">Torturează</button>
+        <div id="result" style="font-size: 30px;"></div>
+        <div id="alternateButtonContainer"></div>
+       
+        
+    </div>
+
+    <script>
+     
+       function torture() {
+            var selectElement = document.getElementById("weapons");
+            var selectedIndex = selectElement.selectedIndex;
+            var selectedWeapon = selectElement.value;
+            var resultElement = document.getElementById("result");
+            var alternateButtonContainer = document.getElementById("alternateButtonContainer");
+
+            if (selectedIndex => 0) { 
+                switch (selectedWeapon) {
+        case "dildo":
+            resultElement.textContent = "Ai ales dildoul. Armin este aplecat peste masa si tipa  'NU STIU DESPRE CE E VORBA',  dar cu mica bagare de seama... ii administrezi doza de suferinta.";
+            break;
+        case "bata":
+            resultElement.textContent = "Ai ales bâta. Il lovesti profesionist in burta si la oo.";
+            break;
+        case "Papuc":
+            resultElement.textContent = "Ai ales papucu. Fraieru pare relieved, dar nu isi poate imagina ce poate urma... iti dezlantui furia in 1000000 de lovituri, lasandu-l profund traumatizat.";
+            break;
+        case "Privirea":
+            resultElement.textContent = "Ai ales privirea. Cu ochii tai cacanii, spintecatori si inselatori, te uiti in ochii lui... IN SUFLETUL LUI si faci o gluma, acesta incepe sa planga, in timp ce tu te scuzi... citez: 'hihi' am incheiat citatul.";
+            break;
+        default:
+           buton();
+    }// Ignorăm prima opțiune care este placeholder
+    selectElement.options[selectedIndex].style.display = 'none';
+                // Resetăm selectul la opțiunea placeholder
+                selectElement.selectedIndex = 0;
+                 } else {
+                buton();
+            }
+            var allWeaponsUsed = true;
+        for (var i = 0; i < selectElement.options.length; i++) {
+            if (selectElement.options[i].style.display !== 'none' && selectElement.options[i].value !== "") {
+                allWeaponsUsed = false;
+                break;
+            }
+        }
+
+        if (allWeaponsUsed) {
+            // Dacă este ultima armă din listă, creăm butonul
+            var button = document.createElement("button");
+            button.textContent = "Mergi mai departe";
+            button.onclick = function() {
+                // Implementează aici acțiunea butonului final
+               window.location.href="aldoileaplic.html";
+            };
+
+            // Adăugăm butonul în container
+            alternateButtonContainer.appendChild(button);
+           
+            }}
+        function buton()
+        {
+            var alternateButtonContainer = document.getElementById("alternateButtonContainer");
+            var button1 = document.createElement("button");
+            button1.textContent = "Mergi mai departe";
+            button1.onclick = function() {
+        // Implementează aici acțiunea butonului 1
+        window.location.href="aldoileaplic.html";
+        
+    };
+    alternateButtonContainer.appendChild(button1);
+        }
+
+       
+    </script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    text-align: start;
+   
+    align-items: center;
+    margin-top: 50px;
+    display: grid;
+}
+
+.mt-5 
+{
+    
+    display:contents;
+    justify-content: center;
+}
+
+.btn.btn-primary{
+    
+    background-color: black;
+    color: lightseagreen;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Example width */
+    height: 40px; /* Example height */
+    border: 2px solid ;
+    
+}
+.btn:disabled
+{
+    width: 300px; /* Example width */
+    height: 40px; /* Example height */
+    border: 2px solid ;
+}
+.hiddenText {
+    display: none; /* Initially hidden */
+    color: lightseagreen;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Fade-in effect */
+}
+.hiddenText.show {
+    display: block;
+    opacity: 1;
+}
