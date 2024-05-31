@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code Breaker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <div id="memoryMatch" class="puzzle">
+            <h2>Memory Match</h2>
+            <div class="grid">
+                <!-- Cards will be dynamically generated here -->
+            </div>
+            <button onclick="startMemoryMatch()">Start Memory Match</button>
+        </div>
+        <div id="patternRecognition" class="puzzle" style="display:none;">
+            <h2>Timpul</h2>
+            <p id="patternQuestion"></p>
+            <input type="text" id="patternAnswer" placeholder="Enter your answer">
+            <button onclick="checkPattern()">Submit</button>
+        </div>
+        <div id="logicPuzzle" class="puzzle" style="display:none;">
+            <h2>Industry Plant</h2>
+            <p id="logicQuestion"></p>
+            <input type="text" id="logicAnswer" placeholder="Enter your answer">
+            <button onclick="checkLogic()">Submit</button>
+        </div>
+        <div id="codeDecryption" class="puzzle" style="display:none;">
+            <h2>Joost</h2>
+            <p id="encryptedMessage"></p>
+            <input type="text" id="decryptedMessage" placeholder="Decrypt the message">
+            <button onclick="checkDecryption()">Submit</button>
+        </div>
+    </div>
+    <div id="clues">
+        <h2>Clues</h2>
+        <ul id="clueList"></ul>
+    </div>
+    <div id="rewardImage" style="display:none;">
+        <h2>Bravo!Pentru urmatorul clue</h2>
+        <b><h2>Deschide miniplicul</h2></b>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
