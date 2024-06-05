@@ -14,5 +14,61 @@
     <h2><b>Deschide plicul 2</b></h2>
     <button class="actionButton"  onclick="goto('index.html')"><</button>
     <script src="script.js"></script>
+    <div id="sky">
+        <div class="pig" id="pig1">🐖</div>
+        <div class="pig" id="pig2">🐖</div>
+        <div class="pig" id="pig3">🐖</div>
+    </div>
+    <style>
+    
+
+h1 {
+    margin-top: 20px;
+    color: #fff;
+}
+
+#sky {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    background: linear-gradient(to bottom, #87CEEB 0%, #87CEEB 50%, #fff 100%);
+    overflow: hidden;
+}
+
+.pig {
+    position: absolute;
+    font-size: 50px;
+    animation: fly 10s linear infinite;
+}
+
+#pig1 {
+    top: 20%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+#pig2 {
+    top: 50%;
+    animation-duration: 15s;
+    animation-delay: 3s;
+}
+
+#pig3 {
+    top: 70%;
+    animation-duration: 10s;
+    animation-delay: 6s;
+}
+
+@keyframes fly {
+    from {
+        left: 110%;
+        transform: translateY(0);
+    }
+    to {
+        left: -10%;
+        transform: translateY(-30px);
+    }
+}
+    </style>
 </body>
 </html>
