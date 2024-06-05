@@ -12,7 +12,7 @@ const puzzles = [
         start: startPatternRecognition,
         question: 'In ce perioada se petrece firul epic?(sarbatoare)',
         answer: 'Paste',
-        clue: 'Poza din camera nu e completa'
+        clue: 'Crezi ca a fost otravit?'
     },
     { 
         type: 'logicPuzzle',

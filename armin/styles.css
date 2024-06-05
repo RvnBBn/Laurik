@@ -1,7 +1,7 @@
 body{
     background-color: black;
     text-align: start;
-   
+    justify-content: center;
     align-items: center;
     margin-top: 50px;
     display: grid;

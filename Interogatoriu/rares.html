@@ -8,10 +8,77 @@
     <link href="styles.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: gray;
+            margin: 0;
+        }
+        .mouth {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background-color: #ffcccc;
+            border-radius: 0 0 100px 100px;
+        }
+        .tooth {
+            position: absolute;
+            width: 30px;
+            height: 40px;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .tooth.extracted {
+            background-color: #f0f0f0;
+            border: 1px solid #f0f0f0;
+            cursor: default;
+        }
+        #message {
+            position: absolute;
+            top: 120px;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            color: rgb(255, 85, 0);
+        }
+    </style>
 </head>
 <body>
     <h2>Pentru fisa lui Rares </h2>
-    <h2><b>Deschide plicul </b></h2>
+    <h2><b>Deschide plicul 6</b></h2>
+    <button class="actionButton"  onclick="goto('index.html')"><</button>
+    <script src="script.js"></script>
 
+
+
+<div class="mouth">
+    <div class="tooth" style="top: 10px; left: 20px;" onclick="extractTooth(this)"></div>
+    <div class="tooth" style="top: 10px; left: 60px;" onclick="extractTooth(this)"></div>
+    <div class="tooth" style="top: 10px; left: 100px;" onclick="extractTooth(this)"></div>
+    <div class="tooth" style="top: 10px; left: 140px;" onclick="extractTooth(this)"></div>
+   
+</div>
+<div id="message"></div>
+
+<script>
+    let teethCount = 4;
+
+    function extractTooth(tooth) {
+        if (!tooth.classList.contains('extracted')) {
+            tooth.classList.add('extracted');
+            teethCount--;
+
+            if (teethCount === 0) {
+                document.getElementById('message').innerText = 'Ai extras toti dintii!!! Un coleg de-al lui a zis ca l-a vazut invatand in biblioteca';
+            }
+        }
+    }
+</script>
 </body>
 </html>
