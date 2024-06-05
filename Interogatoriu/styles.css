@@ -6,6 +6,8 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 10px;
+    background-color: gray;
+    color:rgb(255, 85, 0)
 }
 
 .container {
